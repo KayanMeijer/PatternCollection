@@ -44,6 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Factory.cs" />
+    <Compile Include="Models\PersonFactory.cs" />
+    <Compile Include="Models\Persons\Administrator.cs" />
+    <Compile Include="Models\Persons\Chief.cs" />
+    <Compile Include="Models\Persons\Clerk.cs" />
+    <Compile Include="Models\Persons\Manager.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\PersonType.cs" />
+    <Compile Include="Models\Persons\Programmer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
