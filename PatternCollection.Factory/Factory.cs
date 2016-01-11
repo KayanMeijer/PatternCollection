@@ -1,10 +1,10 @@
-﻿namespace PatternCollection.Repository
+﻿namespace PatternCollection.Factory
 {
-    public class Program
+    public class Factory
     {
         public static void Main(string[] args)
         {
-            
+
         }
     }
 }

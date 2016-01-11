@@ -1,10 +1,10 @@
-﻿namespace PatternCollection.Observer
+﻿namespace PatternCollection.Repository
 {
-    public class Program
+    public class Repository
     {
         public static void Main(string[] args)
         {
-
+            
         }
     }
 }

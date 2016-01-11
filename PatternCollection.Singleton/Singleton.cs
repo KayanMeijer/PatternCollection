@@ -3,7 +3,7 @@ using PatternCollection.Singleton.Models;
 
 namespace PatternCollection.Singleton
 {
-    public class Program
+    public class Singleton
     {
         public static void Main(string[] args)
         {
