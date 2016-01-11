@@ -44,6 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Builder.cs" />
+    <Compile Include="Interfaces\IBuilder.cs" />
+    <Compile Include="Interfaces\IModelBuilder.cs" />
+    <Compile Include="Models\UserData.cs" />
+    <Compile Include="Models\UserDataBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
