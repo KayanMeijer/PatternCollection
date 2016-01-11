@@ -7,17 +7,19 @@ using PatternCollection.Repository.Interfaces;
 
 namespace PatternCollection.Repository.Models
 {
-    public class UserRepository : BaseRepository, IRepository<User, Guid>
+    public class UserRepository : IRepository<User, Guid>
     {
-        public UserRepository(PatternCollectionEntities patternContext) : base(patternContext)
-        {
+        private readonly PatternCollectionEntities patternContext;
 
+        public UserRepository(PatternCollectionEntities patternContext)
+        {
+            this.patternContext = patternContext;
         }
 
         public void Add(User model)
         {
             patternContext.User.Add(model);
-            SaveChanges();
+            patternContext.SaveChanges();
         }
 
         public User Get(Guid id)
@@ -33,13 +35,13 @@ namespace PatternCollection.Repository.Models
         public void Update(User model)
         {
             patternContext.Entry(model).State = EntityState.Modified;
-            SaveChanges();
+            patternContext.SaveChanges();
         }
 
         public void Delete(User model)
         {
             patternContext.User.Remove(model);
-            SaveChanges();
+            patternContext.SaveChanges();
         }
     }
 }
