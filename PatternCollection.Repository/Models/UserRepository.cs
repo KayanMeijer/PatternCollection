@@ -1,42 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PatternCollection.Repository.Database;
 using PatternCollection.Repository.Interfaces;
 
 namespace PatternCollection.Repository.Models
 {
-    public class UserRepository : IUserRepository
+    public class UserRepository : BaseRepository, IRepository<User, Guid>
     {
-        public UserRepository()
+        public UserRepository(PatternCollectionEntities patternContext) : base(patternContext)
         {
-            
+
         }
 
-        public void Save(User model)
+        public void Add(User model)
         {
-            throw new NotImplementedException();
+            patternContext.User.Add(model);
+            SaveChanges();
         }
 
         public User Get(Guid id)
         {
-            throw new NotImplementedException();
+            return patternContext.User.FirstOrDefault(user => user.UserId == id);
+        }
+
+        public IEnumerable<User> GetAll()
+        {
+            return patternContext.User;
         }
 
         public void Update(User model)
         {
-            throw new NotImplementedException();
+            patternContext.Entry(model).State = EntityState.Modified;
+            SaveChanges();
         }
 
         public void Delete(User model)
         {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<User> FindAll()
-        {
-            throw new NotImplementedException();
+            patternContext.User.Remove(model);
+            SaveChanges();
         }
     }
 }

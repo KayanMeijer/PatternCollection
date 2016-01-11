@@ -4,9 +4,11 @@ namespace PatternCollection.Repository.Interfaces
 {
     public interface IRepository<TModel, TKey>
     {
-        void Save(TModel model);
+        void Add(TModel model);
 
         TModel Get(TKey id);
+
+        IEnumerable<TModel> GetAll();
 
         void Update(TModel model);
 
