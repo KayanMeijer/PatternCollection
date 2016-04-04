@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C1D5FC76-DB9C-4FB9-9BC4-76E5C6AE980A}</ProjectGuid>
+    <ProjectGuid>{95269C79-C4AA-44DA-A27B-BBBBBC7D49D5}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PatternCollection.Observer</RootNamespace>
-    <AssemblyName>PatternCollection.Observer</AssemblyName>
+    <RootNamespace>PatternCollection.Factory</RootNamespace>
+    <AssemblyName>PatternCollection.Factory</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,11 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\ControllerA.cs" />
-    <Compile Include="Controllers\ControllerB.cs" />
-    <Compile Include="Observer.cs" />
+    <Compile Include="Factory.cs" />
+    <Compile Include="Models\PersonFactory.cs" />
+    <Compile Include="Models\Persons\Administrator.cs" />
+    <Compile Include="Models\Persons\Chief.cs" />
+    <Compile Include="Models\Persons\Clerk.cs" />
+    <Compile Include="Models\Persons\Manager.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\PersonType.cs" />
+    <Compile Include="Models\Persons\Programmer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\Repository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
